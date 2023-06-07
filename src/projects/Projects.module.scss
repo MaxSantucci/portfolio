@@ -1,0 +1,42 @@
+.projectsBlock {
+   min-height: 100vh;
+   background-color: #191919;
+
+  .projectsContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+
+    .content {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: space-around;
+    }
+  }
+}
+
+//.title {
+//   color: rgba(246, 88, 0, 0.86);
+//   margin: 10px;
+//   font-size: 32px;
+//   font-weight: 700;
+//   line-height: 2;
+//   position: relative;
+//}
+//
+//.title::before {
+//   background: rgba(246, 88, 0, 0.86);
+//   bottom: 0;
+//   content: "";
+//   height: 2px;
+//   left: 50%;
+//   position: absolute;
+//   -webkit-transform: translate(-50%,50%);
+//   transform: translate(-50%,50%);
+//   width: 100px;
+//}
+

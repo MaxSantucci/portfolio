@@ -5,11 +5,18 @@
 
 .text {
     width: 300px;
-    color: white;
+    color: rgba(246, 88, 0, 0.86);
 }
 
 .photo {
     width: 300px;
     height: 400px;
-    background: white;
+    background: rgba(246, 88, 0, 0.86);
+}
+
+@media (max-width: 760px) {
+   .text {
+      text-align: center;
+      padding-bottom: 40px;
+   }
 }
