@@ -1,0 +1,29 @@
+@import '../common/style/sass/variables';
+
+.homeBlock {
+    height: 100vh;
+    background-color: #191919;
+
+  .text {
+    width: 300px;
+    color: $textColor;
+
+    @media (max-width: 760px) {
+      //.text {
+      text-align: center;
+      padding-bottom: 40px;
+      //}
+    }
+  }
+
+  .photo {
+    width: 300px;
+    height: 400px;
+    background: $primaryColor;
+  }
+}
+
+
+
+
+

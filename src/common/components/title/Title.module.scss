@@ -1,0 +1,24 @@
+//@import 'common/style/sass/variables';
+@import '../../../common/style/sass/variables';
+
+.title {
+   color: $primaryColor;
+   margin: 10px;
+   font-size: 32px;
+   font-weight: 700;
+   line-height: 2;
+   text-transform: uppercase;
+   position: relative;
+
+  &::before {
+    background: rgba(246, 88, 0, 0.86);
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    -webkit-transform: translate(-50%,50%);
+    transform: translate(-50%,50%);
+    width: 100px;
+  }
+}

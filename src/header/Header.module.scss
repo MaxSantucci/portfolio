@@ -1,0 +1,50 @@
+@import '../common/style/sass/variables';
+
+.header {
+  //height: 80px;
+  background-color: $bgHeader;
+  align-items: center;
+  //background: rgba(0,0,0,.302);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 68px;
+  justify-content: space-between;
+  margin: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+
+  //.container {
+  //  width: 80%;
+  //  height: 100%;
+  //  margin: 0 auto;
+  //  display: flex;
+  //  align-items: center;
+  //  justify-content: space-between;
+  //  flex-wrap: wrap;
+  //
+  //  @media (max-width: 760px) {
+  //    justify-content: space-around
+  //  }
+  //}
+}
+
+.block {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px;
+  width: 220px;
+}
+
+.link {
+  width: 20px;
+  height: 20px;
+  //background-color: $textColor;
+  margin-left: 10px;
+}
+
+
+

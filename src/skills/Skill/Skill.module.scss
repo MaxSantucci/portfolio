@@ -1,0 +1,71 @@
+@import '../../common/style/sass/variables';
+
+.skill {
+  width: 450px;
+  background-color: black;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-sizing: border-box;
+
+  &:hover {
+    background-image: -webkit-gradient(linear,left top,right top,from(#FF5800),to(#D56521A3));
+    background-image: -webkit-linear-gradient(left,#FF5800,#D56521A3);
+    background-image: linear-gradient(90deg,#FF5800, #D56521A3);
+    transform: translateY(-5px);
+    transition: 0.3s;
+
+    .iconContent {
+      color: $textColor;
+    }
+
+    .content {
+      color: $textColor;
+
+      .description {
+        color: $textColor;
+      }
+    }
+  }
+
+
+}
+
+.container {
+  display: flex;
+  padding: 40px;
+
+  .iconContent {
+    align-items: flex-start;
+    color: $primaryColor;
+    display: flex;
+    flex-direction: row;
+    font-size: 40px;
+    justify-content: flex-start;
+    margin-right: 30px;
+  }
+
+  .content {
+    margin-left: 15px;
+    word-break: break-word;
+
+    .title {
+      color: $textColor;
+      font-size: 20px;
+      margin: 0 0 20px 0;
+    }
+
+    .description {
+      color: $textColor;
+      font-size: 16px;
+    }
+  }
+}
+
+//.skill {
+//  &:hover {
+//    .iconContent {
+//      color: $textColor; /* Replace $textColor with the desired color */
+//    }
+//  }
+//}

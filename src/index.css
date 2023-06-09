@@ -11,3 +11,11 @@ code {
    font-family: 'Roboto Mono', monospace;
 }
 
+a{
+   color: #666666;
+   text-decoration: none;
+}
+a:hover {
+   text-decoration: none;
+   color: black;
+}

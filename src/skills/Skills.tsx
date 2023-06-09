@@ -1,8 +1,9 @@
 import React from 'react';
-import style from './Skills.module.css';
-import styleContainer from '../common/style/Container.module.css';
+import style from './Skills.module.scss';
+import styleContainer from '../common/style/Container.module.scss';
 import {Skill} from './Skill/Skill';
-import {Title} from '../common/title/Title';
+import {Title} from '../common/components/title/Title';
+import {faReact} from '@fortawesome/free-brands-svg-icons'
 
 export const Skills = () => {
    return (
@@ -10,9 +11,14 @@ export const Skills = () => {
          <div className={`${styleContainer.container} ${style.skillsContainer}`}>
             <Title title="Skills"/>
             <div className={style.skills}>
+               {/*<FontAwesomeIcon icon={faReact} bounce style={{color: "#edda07",}} />*/}
                <Skill
                   title={'HTML'}
-                  description={'Fundamentals HTML tags, form and validation, semantic HTML'}/>
+                  description={'Fundamentals HTML tags, form and validation, semantic HTML'}
+                  icon={faReact}
+                  iconColor={'#edda07'}
+                  bounce={true}
+               />
                <Skill
                   title={'CSS'}
                   description={'Positioning, box modal, selectors, flexbox, media queries, transformation & animation'}

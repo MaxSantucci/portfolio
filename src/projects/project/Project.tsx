@@ -5,18 +5,30 @@ type ProjectPropsType = {
    style: React.CSSProperties
    title: string
    titleColor?: string
+   demo: string
+   code: string
 }
 
-const Project: React.FC<ProjectPropsType> = ({style, title, titleColor}) => {
+const Project: React.FC<ProjectPropsType> = ({style, title, titleColor, demo, code}) => {
    return (
       <div className={styles.projectContainer}>
          <div className={styles.portfolioProject} style={style}>
             <div className={styles.projectPreview}>
                <div className={styles.content}>
-                  <h4 className={styles.projectTitle} style={{ color: titleColor }}>{title}</h4>
+                  <h4 className={styles.projectTitle} style={{color: titleColor}}>{title}</h4>
                   <div className={styles.buttonLink}>
-                     <a className={styles.linkDemo}>Demo</a>
-                     <a className={styles.linkDemo}>Code</a>
+                     <a
+                        href={demo}
+                        target='_blank'
+                        rel='noreferrer'
+                        className={styles.linkDemo}
+                     >DEMO</a>
+                     <a
+                        href={code}
+                        target='_blank'
+                        rel='noreferrer'
+                        className={styles.linkDemo}
+                     >CODE</a>
                   </div>
                </div>
             </div>

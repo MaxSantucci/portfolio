@@ -1,0 +1,52 @@
+@import '../common/style/sass/variables';
+
+.item {
+  color: $textColor;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  font-size: 16px;
+  font-weight: 500;
+  justify-content: space-between;
+  padding: 30px;
+  width: 400px;
+
+  .active::before {
+    width: 100%;
+  }
+
+  a {
+    color: $textColor;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.3s cubic-bezier(.645, .045, .355, 1);
+    position: relative;
+    padding: 0 0 10px 0;
+
+    &.activeLink {
+      color: $primaryColor;
+      text-decoration: none;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+
+    &::before {
+      background: $primaryColor;
+      bottom: 0;
+      content: "";
+      height: 3px;
+      left: 0;
+      position: absolute;
+      transition: .3s;
+      width: 0;
+    }
+  }
+}
+
+
+
+
