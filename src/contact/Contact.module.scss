@@ -1,5 +1,18 @@
 @import '../common/style/sass/variables';
 
+@media (max-width: 629px) {
+  .form {
+    width: 100%;
+  }
+}
+
+
+@media (min-width: 630px) {
+  .form {
+    width: 50%;
+  }
+}
+
 .contactBlock {
   height: 100vh;
   background-color: #191919;
@@ -22,16 +35,7 @@
       flex-direction: column;
       height: max-content;
       justify-content: center;
-      @media (max-width: 629px) {
-        //.form {
-        width: 100%;
-      }
 
-
-      @media (min-width: 630px) {
-        //.form {
-        width: 50%;
-      }
 
       .input {
         background-clip: padding-box;
@@ -47,6 +51,7 @@
         line-height: 1.5;
         margin: 5px;
         width: 100%;
+        padding: 0.375rem 0.75rem;
       }
 
       .textarea {

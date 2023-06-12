@@ -1,28 +1,37 @@
 import React from 'react';
 import style from './Header.module.scss';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faTelegram} from '@fortawesome/free-brands-svg-icons/faTelegram';
-import {faLinkedin} from '@fortawesome/free-brands-svg-icons/faLinkedin';
-import {faGithub} from '@fortawesome/free-brands-svg-icons/faGithub';
-import {faEnvelope} from '@fortawesome/free-solid-svg-icons/faEnvelope';
+import {AiFillGithub, AiFillLinkedin, AiOutlineMail} from 'react-icons/ai';
+import {FaTelegramPlane} from 'react-icons/fa';
+import {NavLink} from 'react-router-dom';
 
 
 export const ContactsBlock = () => {
    return (
       <div className={style.block}>
-
-         <a href="">
-            <FontAwesomeIcon icon={faLinkedin} size="lg" style={{color: "#ffffff",}} />
+         <a
+            target="_blank"
+            href="https://www.linkedin.com/in/maksym-marmura/"
+            rel="noreferrer"
+         >
+            <AiFillLinkedin className={style.icon}/>
          </a>
-         <a href="">
-            <FontAwesomeIcon icon={faGithub} size="lg" style={{color: "#ffffff",}} />
+         <a
+            href="https://github.com/MaxSantucci"
+            target="_blank"
+            rel="noreferrer"
+         >
+            <AiFillGithub className={style.icon}/>
          </a>
-         <a href="">
-            <FontAwesomeIcon icon={faTelegram} size='lg' style={{color: "#ffffff",}} />
+         <a
+            href="https://t.me/azovskiy_maks"
+            target="_blank"
+            rel="noreferrer"
+         >
+            <FaTelegramPlane className={style.icon}/>
          </a>
-         <a href="">
-            <FontAwesomeIcon icon={faEnvelope} size="lg" style={{color: "#ffffff",}} />
-         </a>
+         <NavLink to="/contact">
+            <AiOutlineMail className={style.icon}/>
+         </NavLink>
       </div>
    );
 };

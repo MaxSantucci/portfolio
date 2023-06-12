@@ -41,6 +41,7 @@ export const Projects = () => {
                   title='Pizza'
                   demo='https://maxsantucci.github.io/pizza'
                   code='https://github.com/maxsantucci/pizza'
+                  description='Stack: React, Redux-Toolkit, Typescript, SCSS, REST API'
                />
                <Project
                   style={imageTodo}
@@ -48,12 +49,14 @@ export const Projects = () => {
                   titleColor='black'
                   demo='https://maxsantucci.github.io/todolist-ts'
                   code='https://github.com/maxsantucci/todolist-ts'
+                  description='Stack: React, Redux, Typescript, Storybook, Unit-testing, Formik, MUI, REST API'
                />
                <Project
                   style={imageSocial}
                   title='Social network'
                   demo='https://maxsantucci.github.io/social-network'
                   code='https://github.com/maxsantucci/social-network'
+                  description='Stack: React, Redux-Toolkit, Typescript, TailwindCSS, Storybook, MUI, REST API'
                />
             </div>
          </div>

@@ -1,31 +1,58 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './Project.module.scss';
 
 type ProjectPropsType = {
    style: React.CSSProperties
    title: string
    titleColor?: string
+   description?: string
    demo: string
    code: string
 }
 
-const Project: React.FC<ProjectPropsType> = ({style, title, titleColor, demo, code}) => {
+const Project: React.FC<ProjectPropsType> = ({
+                                                style,
+                                                title,
+                                                titleColor,
+                                                description,
+                                                demo,
+                                                code
+                                             }) => {
+   const [isVisible, setIsVisible] = useState<boolean>(false)
+
+   const onMouseEnterHandler = () => {
+      setIsVisible(true)
+   }
+   const onMouseLeaveHandler = () => {
+      setIsVisible(false)
+   }
+
+   const titleStyle = {
+      color: isVisible ? 'white' : titleColor
+   };
+
    return (
-      <div className={styles.projectContainer}>
+      <div className={styles.projectContainer}
+           onMouseEnter={onMouseEnterHandler}
+           onMouseLeave={onMouseLeaveHandler}
+      >
          <div className={styles.portfolioProject} style={style}>
             <div className={styles.projectPreview}>
                <div className={styles.content}>
-                  <h4 className={styles.projectTitle} style={{color: titleColor}}>{title}</h4>
+                  <h4 className={styles.projectTitle}
+                      style={titleStyle}>{title}</h4>
+                  {isVisible &&
+                     <p className={styles.projectDescription}> {description} </p>}
                   <div className={styles.buttonLink}>
                      <a
                         href={demo}
-                        target='_blank'
-                        rel='noreferrer'
+                        target="_blank"
+                        rel="noreferrer"
                         className={styles.linkDemo}
                      >DEMO</a>
                      <a
                         href={code}
-                        target='_blank'
+                        target="_blank"
                         rel='noreferrer'
                         className={styles.linkDemo}
                      >CODE</a>

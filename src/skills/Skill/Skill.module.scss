@@ -15,20 +15,22 @@
     transform: translateY(-5px);
     transition: 0.3s;
 
-    .iconContent {
-      color: $textColor;
-    }
+    //.iconContent {
+    //  color: $textColor;
+    //}
 
     .content {
       color: $textColor;
+
+      .title {
+        color: $textColor;
+      }
 
       .description {
         color: $textColor;
       }
     }
   }
-
-
 }
 
 .container {
@@ -50,22 +52,22 @@
     word-break: break-word;
 
     .title {
-      color: $textColor;
+      color: $textSkills;
       font-size: 20px;
       margin: 0 0 20px 0;
     }
 
     .description {
-      color: $textColor;
+      color: $textSkills;
       font-size: 16px;
     }
   }
 }
 
-//.skill {
-//  &:hover {
-//    .iconContent {
-//      color: $textColor; /* Replace $textColor with the desired color */
-//    }
-//  }
-//}
+.skill {
+  &:hover {
+    .iconContent {
+      color: $textColor;
+    }
+  }
+}
